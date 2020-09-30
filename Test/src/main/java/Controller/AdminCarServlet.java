@@ -65,10 +65,11 @@ public class AdminCarServlet extends HttpServlet {
             case "checkbookdate":
                 checkBookCar(request,response);
                 break;
+            case "home":
+                selectAllAdmin(request,response);
+                break;
             default:
                 login(request,response);
-
-
                 break;
         }
     }
@@ -115,7 +116,7 @@ public class AdminCarServlet extends HttpServlet {
         carService.removeCar(id);
         selectAllAdmin(request,response);
     }
-    protected  void selectAllAdmin(HttpServletRequest request, HttpServletResponse response){
+    public void selectAllAdmin(HttpServletRequest request, HttpServletResponse response){
         try {
             List<Car> carList = carService.selectAll();
             request.setAttribute("carlist",carList);

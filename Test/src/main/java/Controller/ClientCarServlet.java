@@ -49,6 +49,7 @@ public class ClientCarServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         selectAll(request,response);
     }
     protected void searchBy(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
@@ -63,10 +64,11 @@ public class ClientCarServlet extends HttpServlet {
             }
         }
         request.setAttribute("carlist",cars);
-        RequestDispatcher rq = request.getRequestDispatcher("/View/HomePage.jsp");
+        RequestDispatcher rq = request.getRequestDispatcher("/ViewClient/ClientHomePage.jsp");
         rq.forward(request, response);
     }
     protected HttpSession login(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        AdminCarServlet adminsl = new AdminCarServlet();
         HttpSession session = request.getSession();
         String account = request.getParameter("account");
         String password = request.getParameter("passwords");
@@ -76,8 +78,7 @@ public class ClientCarServlet extends HttpServlet {
         }else{
             session.setAttribute("account",account);
             session.setAttribute("password",password);
-            RequestDispatcher rq = request.getRequestDispatcher("/Admin");
-            rq.forward(request, response);
+            adminsl.selectAllAdmin(request,response);
         }
         return session;
     }

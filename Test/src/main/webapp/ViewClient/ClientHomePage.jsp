@@ -22,12 +22,12 @@
             <i class="fad fa-rocket-launch"></i>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="#"><h1 style="font-family: monospace">V&T SHOWROOM</h1></a>
+            <a class="nav-link" href="/Client?action="><h1 style="font-family: monospace">V&T SHOWROOM</h1></a>
         </li>
     </ul>
     <button type="button" class="btn btn-outline-secondary" style="margin-right: 30px" data-toggle="modal"
             data-target="#exampleModal">
-        ADMIN
+        Login
     </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
              aria-hidden="true">
@@ -45,7 +45,7 @@
                             <label>Tài khoản</label>
                             <input type="text" class="form-control" name="account" placeholder="account">
                             <label>Mật khẩu</label>
-                            <input type="text" class="form-control" name="passwords" placeholder="passwords">
+                            <input type="password" class="form-control" name="passwords" placeholder="passwords">
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Đăng nhập</button>
                             </div>

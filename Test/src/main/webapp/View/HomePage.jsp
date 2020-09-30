@@ -22,7 +22,7 @@
             <i class="fad fa-rocket-launch"></i>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="#"><h1 style="font-family: monospace">V&T SHOWROOM</h1></a>
+                <a class="nav-link" href="/Admin?action=home" ><h1 style="font-family: monospace">V&T SHOWROOM</h1></a>
             <form method="post" action="/Admin?action=logOut">
                 <div class="row">
                 <div class="col"> <p style="color: white">Tên người đăng nhập:<a name="account"><%=session.getAttribute("account") %></a> </p></div>
